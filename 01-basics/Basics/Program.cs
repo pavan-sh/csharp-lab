@@ -17,6 +17,7 @@ string userTaxRegime = Console.ReadLine();
 char taxRegime = char.Parse(userTaxRegime);
 
 double tax = 0;
+double salaryAfterTax = 0;
 
 if(taxRegime=='a'){
     if(salary <= 250000){
@@ -32,9 +33,29 @@ if(taxRegime=='a'){
     else {
         tax = 112500 + (salary - 1000000) * 0.30;
     }
-    double salaryAfterTax = salary - tax;
+
+    salaryAfterTax = salary - tax;
 
     Console.WriteLine("\nWith old tax regime, salary is: "+salaryAfterTax+"\n");
+
 } else {
-    Console.WriteLine("\nWith new tax regime, salary is: \n");
+    if (salary <= 400000){
+        tax = 0;
+    }
+    else if (salary <= 600000){
+        tax = (salary - 300000) * 0.05;
+    }
+    else if (salary <= 900000){
+        tax = 15000 + (salary - 600000);
+    }
+    else if (salary <= 1200000){
+        tax = 4500 + (salary - 900000) * 0.15;
+    } 
+    else {
+        tax = 90000 + (salary - 1200000) * 0.20;
+    }
+
+    salaryAfterTax = salary - tax;
+
+    Console.WriteLine("\nWith new tax regime, salary is: "+salaryAfterTax);
 }
