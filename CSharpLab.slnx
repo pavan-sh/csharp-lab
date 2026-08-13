@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/01-basics/">
     <Project Path="01-basics/Basics/Basics.csproj" />
+    <Project Path="01-basics/CircleArea/CircleArea.csproj" />
   </Folder>
 </Solution>
