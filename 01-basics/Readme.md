@@ -8,6 +8,10 @@
 
 - Run project - `dotnet run --project relative/path`
 
+- Console.Write(), Console.WriteLine() is used to write output to console and Console.ReadLine() is used to read input from user.
+
+- $ allows to interpolate string, @ can be used for writing verbatim string. Both can be combined for interpolated verbatim string
+
 ## Data Types
 
 - int
