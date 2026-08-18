@@ -3,12 +3,11 @@ Simple Salary Calculator
 */
 
 Console.WriteLine("\nEnter your salary:");
+DateTime currentDate = DateTime.Now;
 
 string userSalaryInput = Console.ReadLine();
 
 int salary = int.Parse(userSalaryInput);
-
-//Console.WriteLine("\nEntered Salary is- \t" + salary+ "\n");
 
 Console.WriteLine("\nChoose Tax Regime (Enter a or b) \n a) Old Tax Regime b) New Tax Regime: ");
 
@@ -59,3 +58,4 @@ if(taxRegime=='a'){
 
     Console.WriteLine("\nWith new tax regime, salary is: "+salaryAfterTax);
 }
+Console.Write("\n "+currentDate);

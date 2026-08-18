@@ -12,12 +12,15 @@
 
 - $ allows to interpolate string, @ can be used for writing verbatim string. Both can be combined for interpolated verbatim string
 
+- Implicit (Inferred, required LINQ), explicit typing
+
 ## Data Types
 
 - int
 - float
 - string
 - const
+- DateTime
 
 ## OOP
 
