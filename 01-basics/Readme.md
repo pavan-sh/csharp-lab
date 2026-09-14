@@ -4,7 +4,7 @@
   `dotnet new console -n FileName`
 
 - Adding to existing solution -
-  `dotnet sln CSharpLab.sln add relative/path/file.csproj`
+  `dotnet sln CSharpLab.slnx add relative/path/file.csproj`
 
 - Run project - `dotnet run --project relative/path`
 
@@ -13,6 +13,8 @@
 - $ allows to interpolate string, @ can be used for writing verbatim string. Both can be combined for interpolated verbatim string
 
 - Implicit (Inferred, required LINQ), explicit typing
+
+- Creating methods, need to define: access-modifier return type Method_Name(Parameter){}
 
 ## Data Types
 
