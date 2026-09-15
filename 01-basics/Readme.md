@@ -16,6 +16,8 @@
 
 - Creating methods, need to define: access-modifier return type Method_Name(Parameter){}
 
+- Method overloading: The ability for multiple methods in the same class to share the same name, provided they have different parameter types, counts, or order.
+
 ## Data Types
 
 - int

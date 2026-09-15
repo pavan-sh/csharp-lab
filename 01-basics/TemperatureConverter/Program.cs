@@ -25,6 +25,14 @@ double myTemperature = TemperatureFinder(37);
 Console.WriteLine(myTemperature);
 
 var Utilities = new Utilities();
-var totalTemperature = Utilities.GetTemperature(38);
+var totalTemperatureinCelcius = Utilities.GetTemperature(38);
 
-Console.WriteLine(totalTemperature);
+var totalTemperatureInKelvin = Utilities.GetTemperature(38, "Kelvin");
+
+var normalizedTemperatureInKelvin = Utilities.GetTemperature(39, "Kelvin", 1);
+
+Console.WriteLine($"\nTotal Temperature in Celcius is {totalTemperatureinCelcius} \n");
+
+Console.WriteLine($"Total Temperature in Kelvin is {totalTemperatureInKelvin} \n");
+
+Console.WriteLine($"Total Normalized Temperature is {normalizedTemperatureInKelvin} \n");
