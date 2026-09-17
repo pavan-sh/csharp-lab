@@ -36,3 +36,13 @@ Console.WriteLine($"\nTotal Temperature in Celcius is {totalTemperatureinCelcius
 Console.WriteLine($"Total Temperature in Kelvin is {totalTemperatureInKelvin} \n");
 
 Console.WriteLine($"Total Normalized Temperature is {normalizedTemperatureInKelvin} \n");
+
+
+// Test optional param - optional param should be placed at end
+Utilities.GetTemperatureOptional();
+
+// Test named param - named param can have any order but values must be assigned
+Utilities.GetTemperatureNamed();
+
+// Test expression bodied syntax (fat arrow)
+Utilities.GetTemperatureWithExpressionBodiedSyntax();

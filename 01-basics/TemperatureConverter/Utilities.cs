@@ -12,6 +12,8 @@ public class Utilities
         return fahrenheit;
     }
 
+    public static double GetTemperatureExpressionBodied(double temperatureInCelsius) => (temperatureInCelsius * conversionFactor) + offset;
+
     // Method overloading
     public static double GetTemperature(double temperatureInCelsius, string targetUnit)
     {
@@ -30,7 +32,7 @@ public class Utilities
     }
 
     // Method overloading
-    public static double GetTemperature(double temperatureInCelsius, string targetUnit, int decimalPlaces)
+    public static double GetTemperature(double temperatureInCelsius, string targetUnit, int decimalPlaces = 0)
     {
         double output = 0;
         switch (targetUnit)
@@ -46,5 +48,23 @@ public class Utilities
                 break;
         }
         return Math.Round(output, decimalPlaces); 
-    }    
+    } 
+
+    public static void GetTemperatureOptional()
+    {
+        var output = GetTemperature(40, "Fahrenheit");
+        Console.WriteLine($"The current temperature in Fahrenheit is - {output}");
+    }   
+
+    public static void GetTemperatureNamed()
+    {
+        var output = GetTemperature(targetUnit: "Kelvin", temperatureInCelsius: 33);
+        Console.WriteLine($"The current temperature in Kelvin is - {output}");        
+    }
+
+    public static void GetTemperatureWithExpressionBodiedSyntax()
+    {
+        var output = GetTemperatureExpressionBodied(27);
+        Console.WriteLine($"The Temperature in fahrenheit is - {output}");
+    }
 }
