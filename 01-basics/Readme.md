@@ -18,6 +18,11 @@
 
 - Method overloading: The ability for multiple methods in the same class to share the same name, provided they have different parameter types, counts, or order.
 
+- Variable scope: Scope refers to the region where the variable is known,
+  variable known within method only is local scope
+
+- Optional Parameters, Named Parameters, Expression Bodied Syntax (Fat arrow)
+
 ## Data Types
 
 - int
