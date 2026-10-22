@@ -2,6 +2,7 @@
   <Folder Name="/01-basics/">
     <Project Path="01-basics/Basics/Basics.csproj" />
     <Project Path="01-basics/CircleArea/CircleArea.csproj" />
+    <Project Path="01-basics/Classes/Classes.csproj" />
     <Project Path="01-basics/FeetToCm/FeetToCm.csproj" />
     <Project Path="01-basics/GuessNumberGame/GuessNumberGame.csproj" />
     <Project Path="01-basics/TemperatureConverter/TemperatureConverter.csproj" />
