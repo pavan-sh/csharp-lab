@@ -3,7 +3,23 @@ public class Person
     private readonly string firstName;
     private readonly string lastName;
 
-    public Person(string firstName, string lastName)
+    private readonly PersonStatus status;
+
+    public static class ErrorMessages
+    {
+        public const string FirstNameError = "First name cannot be blank.";
+        public const string LastNameError = "Last name cannot be blank.";
+    }
+
+    public enum PersonStatus
+    {
+        Unknown = 0,
+        Active = 1,
+        Inactive = 2
+    }
+
+
+    public Person(string firstName, string lastName, PersonStatus status = PersonStatus.Active)
     {
         if (!string.IsNullOrWhiteSpace(firstName))
         {
@@ -11,7 +27,7 @@ public class Person
         }
         else
         {
-            throw new ArgumentException("First name cannot be blank.", nameof(firstName));
+            throw new ArgumentException(ErrorMessages.FirstNameError, nameof(firstName));
         }
         if (!string.IsNullOrWhiteSpace(lastName))
         {
@@ -19,14 +35,18 @@ public class Person
         }
         else
         {
-            throw new ArgumentException("Last name cannot be blank.", nameof(lastName));
+            throw new ArgumentException(ErrorMessages.LastNameError, nameof(lastName));
         }
-
+        if (!Enum.IsDefined(status))
+        {
+            throw new ArgumentOutOfRangeException(nameof(status));
+        }
+        this.status = status;
     }
 
-    public string GetFullName()
+    public string GetFullNameWithStatus()
     {
-        return $"{firstName} {lastName}";
+        return $"{firstName} {lastName} - {status}";
     }
 
 }
