@@ -1,7 +1,9 @@
 ﻿Console.WriteLine("Top Level Functions");
-WhatsMyNamespaces();
+//WhatsMyNamespaces();
 
 // Named arguments clarify what each value means.
-NumbersTable(size: 10, number: 5);
+//NumbersTable(size: 10, number: 5);
 
-Console.WriteLine($"Total Tax Amount: {GetTaxAmount(100, "IN")}");
+//Console.WriteLine($"Total Tax Amount: {GetTaxAmount(100, "IN")}");
+//CardinalToOrdinal(101);
+GetOrdinalSeriesFromNumber(100);
